@@ -1,0 +1,24 @@
+<h1>{{name}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Metodo:</td>
+  <dd>{{capitalizedName}}</dd>
+  <!-- no necesita parentesis pq se trata como una propiedad -->
+
+  <td>Capitalizado:</td>
+  <dd>{{getHeroDescription()}}</dd>
+  <!-- si necesita los parentesis pq es un metodo -->
+
+</dl>
+
+<button class="btn btn-primary mx-2" (click)="changeHero()" *ngIf="name!== 'spiderman'">Cambiar Nombre</button>
+
+<button class="btn btn-primary mx-2" (click)="changeAge()" *ngIf="age!=30">Cambiar Edad</button>
+
+<button class="btn btn-primary" (click)="resetForm()">Reset</button>
